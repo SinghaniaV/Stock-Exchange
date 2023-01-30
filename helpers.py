@@ -40,8 +40,8 @@ def lookup(symbol):
 
     # Contact API
     try:
-        api_key = os.environ.get("API_KEY")
-        url = f"https://cloud.iexapis.com/stable/stock/{urllib.parse.quote_plus(symbol)}/quote?token={api_key}"
+        api_key = os.environ.get("API_KEY3")
+        url = f"https://www.alphavantage.co/query?function=OVERVIEW&symbol={urllib.parse.quote_plus(symbol)}&apikey={api_key}"
         response = requests.get(url)
         response.raise_for_status()
     except requests.RequestException:
@@ -51,9 +51,9 @@ def lookup(symbol):
     try:
         quote = response.json()
         return {
-            "name": quote["companyName"],
-            "price": float(quote["latestPrice"]),
-            "symbol": quote["symbol"]
+            "name": quote["Name"],
+            "price": float(quote["200DayMovingAverage"]),
+            "symbol": quote["Symbol"]
         }
     except (KeyError, TypeError, ValueError):
         return None
