@@ -1,6 +1,4 @@
-# Finance: A Stock Portfolio [live](https://stockex.onrender.com)
-
-
+# Finance: A Stock Portfolio: [live](https://stockex.onrender.com)
 
 Project for Week 8 of Harvard's CS50
 
