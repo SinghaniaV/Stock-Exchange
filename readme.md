@@ -1,4 +1,6 @@
-# Finance: A Stock Portfolio
+# Finance: A Stock Portfolio: [live](https://stockex.onrender.com)
+
+
 
 Project for Week 8 of Harvard's CS50
 
@@ -12,10 +14,6 @@ Project for Week 8 of Harvard's CS50
 * SQL
 * HTML
 * Bootstrap
-
-
-## Summary
-Finance is a web app that allows logged-in users to "buy" and "sell" stocks (with pretend money) as well as look up real stock quotes fetched from IEX API. Users can also view their stock portfolio transaction history.
 
 ## How to Run
 1. Clone this repository, navigate to the project and type the following commands:
