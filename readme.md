@@ -1,10 +1,9 @@
-# Finance: A Stock Portfolio: [live](https://stockex.onrender.com)
+A mini simulation of the Stock Exchange
+---
+A WebApp that enables authenticated users to trade stocks using simulated funds, access real-time stock quotes from the **alphavantage API**, and view their portfolio’s transaction history.
+Try it out [here](https://stockex.onrender.com/).
 
-Project for Week 8 of Harvard's CS50
-
-[View the full assignment description on CS50's OpenCourseWare](https://cs50.harvard.edu/x/2020/tracks/web/finance/)
-
-<img src="screenshot.png" alt="screenshot of finance project" width="600px">
+<!-- more -->
 
 ## Technologies
 * Python
@@ -13,26 +12,15 @@ Project for Week 8 of Harvard's CS50
 * HTML
 * Bootstrap
 
-## Views
+## Features
+* **Register** - Allows a new user to register for an account, rendering an apology view if the form data is incomplete or if the username already exists in the database.
 
-### Register
-Allow a new user to register for an account, rendering an apology view if the form data is incomplete or if the username already exists in the database.
+* **Index** - The homepage displays a table of the logged-in user's owned stocks, number of shares, current stock price, value of each holding. This view also shows the user's imaginary "cash" balance and the total of their "cash" plus stock value.
 
-### Index
-The homepage displays a table of the logged-in user's owned stocks, number of shares, current stock price, value of each holding. This view also shows the user's imaginary "cash" balance and the total of their "cash" plus stock value.
+* **Quote** - Allows the user to submit a form to look up a stock's current price, retrieving real-time data from the Alphavantage API. An error message is rendered if the stock symbol is invalid.
 
-### Quote
-Allows the user to submit a form to look up a stock's current price, retrieving real-time data from the IEX API. An error message is rendered if the stock symbol is invalid.
+* **Buy** - Allows the user to "buy" stocks by submitting a form with the stock's symbol and number of shares. Checks to ensure the stock symbol is valid and the user can afford the purchase at the stock's current market price with their available balance, and stores the transaction history in the database.
 
-### Buy
-Allows the user to "buy" stocks by submitting a form with the stock's symbol and number of shares. Checks to ensure the stock symbol is valid and the user can afford the purchase at the stock's current market price with their available balance, and stores the transaction history in the database.
+* **Sell** - Allows the user to "sell" shares of any stock currently owned in their portfolio.
 
-### Sell
-Allows the user to "sell" shares of any stock currently owned in their portfolio. 
-
-### History
-Displays a table summarizing the user's past transactions (all buys and sells). Each row in the table lists whether the stock was bought or sold, the stock's symbol, the buy/sell price, the number of shares, and the transaction's date/time.
-
----
-
-Please note that the **Login** and **Logout** functions and all functions in **helpers.py** came with the assignment starter code and are not my work. Starter code &copy;2020 David J. Malan/ Harvard
+* **History** - Displays a table summarizing the user's past transactions (all buys and sells). Each row in the table lists whether the stock was bought or sold, the stock's symbol, the buy/sell price, the number of shares, and the transaction's date/time.
